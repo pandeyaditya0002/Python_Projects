@@ -7,4 +7,9 @@ def deposit():
             amount = int(amount)
             if amount > 0 :
                 break
+            else:
+                print()
+        else:
+            print("P")
+
 
