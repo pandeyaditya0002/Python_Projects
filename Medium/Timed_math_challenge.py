@@ -15,3 +15,8 @@ def generate_problem():
     expr = str(left) + " " + operator + " " + str(right)
     answer = eval(expr)
     return expr, answer
+
+wrong = 0
+input("Press enter to start!")
+print("----------------------")
+
