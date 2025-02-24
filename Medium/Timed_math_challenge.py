@@ -1,10 +1,12 @@
 # So here we will create a project to randamly ganerate math questions 
 
 import random
+import time
 
-OPERATORS = ["+","-","/","*"]
-MIN_OPRAND = 3
+OPERATORS = ["+", "-", "*"]
+MIN_OPERAND = 3
 MAX_OPERAND = 12
+TOTAL_PROBLEMS = 10
 
 
 def generate_problem():
@@ -16,7 +18,17 @@ def generate_problem():
     answer = eval(expr)
     return expr, answer
 
+
 wrong = 0
 input("Press enter to start!")
 print("----------------------")
 
+start_time = time.time()
+
+for i in range(TOTAL_PROBLEMS):
+    expr, answer = generate_problem()
+    while True:
+        guess = input("Problem #" + str(i + 1) + ": " + expr + " = ")
+        if guess == str(answer):
+            break
+        wrong += 1
