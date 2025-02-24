@@ -1,5 +1,3 @@
-# So here we will create a project to randamly ganerate math questions 
-
 import random
 import time
 
@@ -32,3 +30,9 @@ for i in range(TOTAL_PROBLEMS):
         if guess == str(answer):
             break
         wrong += 1
+
+end_time = time.time()
+total_time = round(end_time - start_time, 2)
+
+print("----------------------")
+print("Nice work! You finished in", total_time, "seconds!")
