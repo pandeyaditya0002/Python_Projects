@@ -31,4 +31,10 @@ def main():
         if city.lower() == "exit":
             print("Goodbye!")
             break
-       
+        weather = get_weather(city)
+        for key, value in weather.items():
+            print(f"{key}: {value}")
+        print("-" * 40)
+
+if __name__ == "__main__":
+    main()
