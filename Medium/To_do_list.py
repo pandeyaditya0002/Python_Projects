@@ -39,3 +39,30 @@ def remove_task(tasks):
             print("Invalid task number!")
     except ValueError:
         print("Please enter a valid number!")
+
+
+def main():
+    tasks = load_tasks()
+    while True:
+        print("\nTo-Do List Manager")
+        print("1. View tasks")
+        print("2. Add task")
+        print("3. Remove task")
+        print("4. Exit")
+        choice = input("Choose an option: ")
+        
+        if choice == "1":
+            show_tasks(tasks)
+        elif choice == "2":
+            add_task(tasks)
+        elif choice == "3":
+            remove_task(tasks)
+        elif choice == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice, please try again!")
+
+if __name__ == "__main__":
+    main()
+# Compare this snippet from Medium/To_do_list.py:
