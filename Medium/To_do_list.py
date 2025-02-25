@@ -26,3 +26,16 @@ def add_task(tasks):
     tasks.append(task)
     save_tasks(tasks)
     print("Task added successfully!")
+
+def remove_task(tasks):
+    show_tasks(tasks)
+    try:
+        task_num = int(input("Enter task number to remove: ")) - 1
+        if 0 <= task_num < len(tasks):
+            removed_task = tasks.pop(task_num)
+            save_tasks(tasks)
+            print(f"Removed task: {removed_task}")
+        else:
+            print("Invalid task number!")
+    except ValueError:
+        print("Please enter a valid number!")
