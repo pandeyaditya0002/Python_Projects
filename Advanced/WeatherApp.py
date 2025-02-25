@@ -24,3 +24,11 @@ def get_weather(city):
         return weather
     else:
         return {"Error": data.get("message", "Unable to fetch weather")}
+
+def main():
+    while True:
+        city = input("Enter city name (or type 'exit' to quit): ")
+        if city.lower() == "exit":
+            print("Goodbye!")
+            break
+       
