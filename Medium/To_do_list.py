@@ -13,4 +13,10 @@ def save_tasks(tasks):
     with open(todo_file, "w") as file:
         file.writelines([task + "\n" for task in tasks])
 
-
+def show_tasks(tasks):
+    if not tasks:
+        print("No tasks available!")
+    else:
+        print("\nYour To-Do List:")
+        for i, task in enumerate(tasks, 1):
+            print(f"{i}. {task}")
