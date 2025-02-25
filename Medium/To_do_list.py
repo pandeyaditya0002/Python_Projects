@@ -8,7 +8,6 @@ def load_tasks():
     with open(todo_file, "r") as file:
         return [task.strip() for task in file.readlines()]
 
-
 def save_tasks(tasks):
     with open(todo_file, "w") as file:
         file.writelines([task + "\n" for task in tasks])
@@ -39,7 +38,6 @@ def remove_task(tasks):
             print("Invalid task number!")
     except ValueError:
         print("Please enter a valid number!")
-
 
 def main():
     tasks = load_tasks()
