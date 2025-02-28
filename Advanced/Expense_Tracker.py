@@ -30,3 +30,14 @@ def view_expenses():
         print(f"{index}. {expense['category']}: ${expense['amount']} - {expense['description']}")
         total += expense["amount"]
     print(f"\nTotal Expenses: ${total}")
+
+
+def delete_expense(index):
+    expenses = load_expenses()
+    if 0 <= index < len(expenses):
+        removed = expenses.pop(index)
+        save_expenses(expenses)
+        print(f"Deleted expense: {removed['category']} - ${removed['amount']}")
+    else:
+        print("Invalid expense number.")
+        
