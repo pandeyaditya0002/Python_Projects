@@ -40,4 +40,33 @@ def delete_expense(index):
         print(f"Deleted expense: {removed['category']} - ${removed['amount']}")
     else:
         print("Invalid expense number.")
+
+
+def main():
+    while True:
+        print("\nExpense Tracker")
+        print("1. Add Expense")
+        print("2. View Expenses")
+        print("3. Delete Expense")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
         
+        if choice == "1":
+            amount = float(input("Enter amount: "))
+            category = input("Enter category (e.g., Food, Transport, Bills): ")
+            description = input("Enter description: ")
+            add_expense(amount, category, description)
+        elif choice == "2":
+            view_expenses()
+        elif choice == "3":
+            view_expenses()
+            index = int(input("Enter expense number to delete: ")) - 1
+            delete_expense(index)
+        elif choice == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
