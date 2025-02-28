@@ -1,25 +1,26 @@
 import json
 import os
 
+# Load expenses from the JSON file
 def load_expenses():
     if os.path.exists("expenses.json"):
         with open("expenses.json", "r") as file:
             return json.load(file)
     return []
 
-
+# Save expenses to the JSON file
 def save_expenses(expenses):
     with open("expenses.json", "w") as file:
         json.dump(expenses, file, indent=4)
 
-
+# Add a new expense to the list and save it
 def add_expense(amount, category, description):
     expenses = load_expenses()
     expenses.append({"amount": amount, "category": category, "description": description})
     save_expenses(expenses)
     print("Expense added successfully!")
 
-
+# View all expenses and print the total amount
 def view_expenses():
     expenses = load_expenses()
     if not expenses:
@@ -31,7 +32,7 @@ def view_expenses():
         total += expense["amount"]
     print(f"\nTotal Expenses: ${total}")
 
-
+# Delete an expense by its index and save the updated list
 def delete_expense(index):
     expenses = load_expenses()
     if 0 <= index < len(expenses):
@@ -41,7 +42,7 @@ def delete_expense(index):
     else:
         print("Invalid expense number.")
 
-
+# Main function to run the expense tracker program
 def main():
     while True:
         print("\nExpense Tracker")
@@ -68,5 +69,6 @@ def main():
         else:
             print("Invalid choice. Please try again.")
 
+# Run the main function if the script is executed directly
 if __name__ == "__main__":
     main()

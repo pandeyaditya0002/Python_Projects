@@ -1,0 +1,22 @@
+[
+    {
+        "amount": 2000.0,
+        "category": "food",
+        "description": "home and kitechn and cleaning cloths "
+    },
+    {
+        "amount": 700.0,
+        "category": "fridge rent",
+        "description": "bill"
+    },
+    {
+        "amount": 500.0,
+        "category": "recharge ",
+        "description": "wifi bill"
+    },
+    {
+        "amount": 499.0,
+        "category": "bill",
+        "description": "electricity bill"
+    }
+]
