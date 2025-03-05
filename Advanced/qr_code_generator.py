@@ -1,6 +1,4 @@
-'''
-Hackr.io Python Tutorial: QR Code Generator
-'''
+# Generate QR code from a URL using Python and Tkinter
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
