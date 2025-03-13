@@ -24,3 +24,13 @@ def setup_game():
     r_paddle.shapesize(stretch_wid=6, stretch_len=2)
     r_paddle.penup()
     r_paddle.goto(400, 0)
+
+  # Define ball
+    ball = turtle.Turtle()
+    ball.speed(40)
+    ball.shape('circle')
+    ball.color('blue')
+    ball.penup()
+    ball.goto(0, 0)
+    ball.dx = 5
+    ball.dy = -5
