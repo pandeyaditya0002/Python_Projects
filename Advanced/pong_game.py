@@ -69,3 +69,19 @@ def pong_game():
     screen.onkeypress(l_paddle_down, 'x')  # Left paddle moves down with 'x'
     screen.onkeypress(r_paddle_up, 'Up')  # Right paddle moves up with 'Up Arrow'
     screen.onkeypress(r_paddle_down, 'Down')  # Right paddle moves down with 'Down Arrow'
+
+    while True:
+        screen.update()
+        ball.setx(ball.xcor() + ball.dx)
+        ball.sety(ball.ycor() + ball.dy)
+
+        if ball.ycor() > 280 or ball.ycor() < -280:
+            ball.dy *= -1
+
+        if ball.xcor() > 500 or ball.xcor() < -500:
+            ball.goto(0, 0)
+            ball.dy *= -1
+
+        if ((ball.xcor() > 360 and ball.xcor() < 370 and ball.ycor() < r_paddle.ycor() + 40 and ball.ycor() > r_paddle.ycor() - 40) or
+            (ball.xcor() < -360 and ball.xcor() > -370 and ball.ycor() < l_paddle.ycor() + 40 and ball.ycor() > l_paddle.ycor() - 40)):
+            ball.dx *= -1
