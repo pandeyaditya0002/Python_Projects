@@ -32,3 +32,11 @@ label_to.pack(pady=5)
 unit_to_var = tk.StringVar()
 combo_to = ttk.Combobox(root, textvariable=unit_to_var, font=("Helvetica", 10))
 combo_to.pack(pady=5)
+
+# Convert button
+button_convert = ttk.Button(root, text="Convert", command=None)
+button_convert.pack(pady=10)
+
+# Result label
+label_result = ttk.Label(root, text="", font=("Helvetica", 14), background="#f0f4f7", foreground="#333")
+label_result.pack(pady=20)
