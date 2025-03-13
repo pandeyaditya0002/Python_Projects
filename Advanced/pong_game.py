@@ -62,3 +62,10 @@ def pong_game():
 
     def r_paddle_down():
         r_paddle.sety(r_paddle.ycor() - 20)
+
+         # Map keyboard inputs to paddle movement
+    screen.listen()
+    screen.onkeypress(l_paddle_up, 'e')  # Left paddle moves up with 'e'
+    screen.onkeypress(l_paddle_down, 'x')  # Left paddle moves down with 'x'
+    screen.onkeypress(r_paddle_up, 'Up')  # Right paddle moves up with 'Up Arrow'
+    screen.onkeypress(r_paddle_down, 'Down')  # Right paddle moves down with 'Down Arrow'
