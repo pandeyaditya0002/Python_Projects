@@ -45,3 +45,8 @@ def setup_game():
     score_board.write('Left Player: 0 -- Right Player: 0', align='center', font=('Arial', 24, 'normal'))
 
     return screen, ball, l_paddle, r_paddle, score_board
+
+def pong_game():
+    game_components = setup_game()
+    screen, ball, l_paddle, r_paddle, score_board = game_components
+    l_score, r_score = 0, 0
