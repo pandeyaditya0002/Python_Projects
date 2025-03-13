@@ -50,3 +50,15 @@ def pong_game():
     game_components = setup_game()
     screen, ball, l_paddle, r_paddle, score_board = game_components
     l_score, r_score = 0, 0
+ # Define movement functions
+    def l_paddle_up():
+        l_paddle.sety(l_paddle.ycor() + 20)
+
+    def l_paddle_down():
+        l_paddle.sety(l_paddle.ycor() - 20)
+
+    def r_paddle_up():
+        r_paddle.sety(r_paddle.ycor() + 20)
+
+    def r_paddle_down():
+        r_paddle.sety(r_paddle.ycor() - 20)
