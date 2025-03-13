@@ -34,3 +34,14 @@ def setup_game():
     ball.goto(0, 0)
     ball.dx = 5
     ball.dy = -5
+
+     # Define scoreboard
+    score_board = turtle.Turtle()
+    score_board.speed(0)
+    score_board.color('blue')
+    score_board.penup()
+    score_board.hideturtle()
+    score_board.goto(0, 260)
+    score_board.write('Left Player: 0 -- Right Player: 0', align='center', font=('Arial', 24, 'normal'))
+
+    return screen, ball, l_paddle, r_paddle, score_board
