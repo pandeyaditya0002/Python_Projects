@@ -85,3 +85,6 @@ def pong_game():
         if ((ball.xcor() > 360 and ball.xcor() < 370 and ball.ycor() < r_paddle.ycor() + 40 and ball.ycor() > r_paddle.ycor() - 40) or
             (ball.xcor() < -360 and ball.xcor() > -370 and ball.ycor() < l_paddle.ycor() + 40 and ball.ycor() > l_paddle.ycor() - 40)):
             ball.dx *= -1
+
+        if __name__ == "__main__":
+    pong_game()
